@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.promo-input{
+    border: 1px solid lightgray !important;
+}
+
+
+.red-bg-btn{
+    background-color: #DC3545 !important;
+    color: white;
+}
+
+.red-bg-btn:hover{
+    color: white;
+}
+
+button:hover{
+    border: 1px solid rgb(161, 158, 158) !important;
+}
+
+.custom-border-top{
+    border-top: 3px solid rgb(58, 54, 54);
+}
