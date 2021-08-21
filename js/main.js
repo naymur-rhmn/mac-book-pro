@@ -6,7 +6,6 @@ const deliveryPrice = document.getElementById('delivery-price');
 const totalPrice = document.getElementById('total-price');
 const totalCostPrice = document.getElementById('total-cost');
 
-
 // onclick event function 
 function memoryGb8() {
     memoryPrice.innerText = 0;
@@ -47,10 +46,10 @@ function withChargeDelivery() {
 document.getElementById('promo-apply-btn').addEventListener('click', function () {
     const promoCode = document.getElementById('promo-input');
     const promo = 'stevekaku';
+    const percentageValue = totalPrice.innerText;
+    const percent = 20;
     if (promoCode.value == promo) {
-        const twentyPercent = (20 / 100) * totalPrice.innerText;
-        const newTotalCostPrice = totalPrice.innerText - twentyPercent;
-        totalCostPrice.innerText = newTotalCostPrice;
+        promoOffer(percent, percentageValue);
     }
     else {
         alert('Incorrect Promo Code! Please, buy regular basis.');
@@ -58,6 +57,12 @@ document.getElementById('promo-apply-btn').addEventListener('click', function ()
     promoCode.value = '';
 })
 
+// promo offer function
+function promoOffer(percent, percentageValue) {
+    const percentage = (percent / 100) * percentageValue;
+    const newTotalCostPrice = totalPrice.innerText - percentage;
+    totalCostPrice.innerText = newTotalCostPrice;
+}
 // total price function
 function getTotalPrice() {
     // convert to number
